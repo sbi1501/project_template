@@ -40,3 +40,15 @@ run migrations:
 ```
 docker-compose -f docker-compose.prod.yml exec web python manage.py migrate --noinput
 ```
+
+collect static:
+
+```
+docker-compose -f docker-compose.prod.yml exec web python manage.py collectstatic --no-input --clear
+```
+
+show logs:
+
+```
+docker-compose -f docker-compose.prod.yml logs -f
+```
